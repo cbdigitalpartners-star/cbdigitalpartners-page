@@ -69,7 +69,7 @@
   document.documentElement.classList.add("reveal-on");
 
   var targets = document.querySelectorAll(
-    ".section-head, .feature, .sol-feature, .sol-grid > *, .trust-item, .cta-band"
+    ".section-head, .feature, .case-body, .case-media, .pipeline > li, .sol-feature, .sol-grid > *, .trust-item, .cta-band"
   );
   targets.forEach(function (el) { el.classList.add("reveal"); });
 
