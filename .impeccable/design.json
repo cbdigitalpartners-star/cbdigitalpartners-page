@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T00:30:25+00:00",
+  "title": "Design System: C&B Digital Partners",
+  "extensions": {
+    "colorMeta": {
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "oklch(59.3% 0.221 270)",
+        "tonalRamp": [
+          "oklch(15% 0.200 270)",
+          "oklch(26% 0.200 270)",
+          "oklch(37% 0.200 270)",
+          "oklch(48% 0.200 270)",
+          "oklch(59% 0.200 270)",
+          "oklch(70% 0.200 270)",
+          "oklch(82% 0.200 270)",
+          "oklch(95% 0.200 270)"
+        ]
+      },
+      "signal-blue-dark": {
+        "role": "primary",
+        "displayName": "Signal Blue (dark theme)",
+        "canonical": "oklch(66.8% 0.176 274)",
+        "tonalRamp": [
+          "oklch(15% 0.176 274)",
+          "oklch(26% 0.176 274)",
+          "oklch(37% 0.176 274)",
+          "oklch(48% 0.176 274)",
+          "oklch(59% 0.176 274)",
+          "oklch(70% 0.176 274)",
+          "oklch(82% 0.176 274)",
+          "oklch(95% 0.176 274)"
+        ]
+      },
+      "production-teal": {
+        "role": "secondary",
+        "displayName": "Production Teal",
+        "canonical": "oklch(77.7% 0.145 176)",
+        "tonalRamp": [
+          "oklch(15% 0.145 176)",
+          "oklch(26% 0.145 176)",
+          "oklch(37% 0.145 176)",
+          "oklch(48% 0.145 176)",
+          "oklch(59% 0.145 176)",
+          "oklch(70% 0.145 176)",
+          "oklch(82% 0.145 176)",
+          "oklch(95% 0.145 176)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Navy Ink",
+        "canonical": "oklch(17.7% 0.034 270)",
+        "tonalRamp": [
+          "oklch(15% 0.034 270)",
+          "oklch(26% 0.034 270)",
+          "oklch(37% 0.034 270)",
+          "oklch(48% 0.034 270)",
+          "oklch(59% 0.034 270)",
+          "oklch(70% 0.034 270)",
+          "oklch(82% 0.034 270)",
+          "oklch(95% 0.034 270)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(23.6% 0.044 269)",
+        "tonalRamp": [
+          "oklch(15% 0.044 269)",
+          "oklch(26% 0.044 269)",
+          "oklch(37% 0.044 269)",
+          "oklch(48% 0.044 269)",
+          "oklch(59% 0.044 269)",
+          "oklch(70% 0.044 269)",
+          "oklch(82% 0.044 269)",
+          "oklch(95% 0.044 269)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "canonical": "oklch(98.0% 0.005 275)",
+        "tonalRamp": [
+          "oklch(15% 0.005 275)",
+          "oklch(26% 0.005 275)",
+          "oklch(37% 0.005 275)",
+          "oklch(48% 0.005 275)",
+          "oklch(59% 0.005 275)",
+          "oklch(70% 0.005 275)",
+          "oklch(82% 0.005 275)",
+          "oklch(95% 0.005 275)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "oklch(49.5% 0.024 264)",
+        "tonalRamp": [
+          "oklch(15% 0.024 264)",
+          "oklch(26% 0.024 264)",
+          "oklch(37% 0.024 264)",
+          "oklch(48% 0.024 264)",
+          "oklch(59% 0.024 264)",
+          "oklch(70% 0.024 264)",
+          "oklch(82% 0.024 264)",
+          "oklch(95% 0.024 264)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(93.2% 0.011 275)",
+        "tonalRamp": [
+          "oklch(15% 0.011 275)",
+          "oklch(26% 0.011 275)",
+          "oklch(37% 0.011 275)",
+          "oklch(48% 0.011 275)",
+          "oklch(59% 0.011 275)",
+          "oklch(70% 0.011 275)",
+          "oklch(82% 0.011 275)",
+          "oklch(95% 0.011 275)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(37% 0.000 90)",
+          "oklch(48% 0.000 90)",
+          "oklch(59% 0.000 90)",
+          "oklch(70% 0.000 90)",
+          "oklch(82% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "surface-alt": {
+        "role": "neutral",
+        "displayName": "Surface Alt",
+        "canonical": "oklch(95.9% 0.014 273)",
+        "tonalRamp": [
+          "oklch(15% 0.014 273)",
+          "oklch(26% 0.014 273)",
+          "oklch(37% 0.014 273)",
+          "oklch(48% 0.014 273)",
+          "oklch(59% 0.014 273)",
+          "oklch(70% 0.014 273)",
+          "oklch(82% 0.014 273)",
+          "oklch(95% 0.014 273)"
+        ]
+      },
+      "band-navy": {
+        "role": "neutral",
+        "displayName": "Band Navy",
+        "canonical": "oklch(17.7% 0.034 270)",
+        "tonalRamp": [
+          "oklch(15% 0.034 270)",
+          "oklch(26% 0.034 270)",
+          "oklch(37% 0.034 270)",
+          "oklch(48% 0.034 270)",
+          "oklch(59% 0.034 270)",
+          "oklch(70% 0.034 270)",
+          "oklch(82% 0.034 270)",
+          "oklch(95% 0.034 270)"
+        ]
+      },
+      "band-muted": {
+        "role": "neutral",
+        "displayName": "Band Muted",
+        "canonical": "oklch(78.0% 0.044 274)",
+        "tonalRamp": [
+          "oklch(15% 0.044 274)",
+          "oklch(26% 0.044 274)",
+          "oklch(37% 0.044 274)",
+          "oklch(48% 0.044 274)",
+          "oklch(59% 0.044 274)",
+          "oklch(70% 0.044 274)",
+          "oklch(82% 0.044 274)",
+          "oklch(95% 0.044 274)"
+        ]
+      },
+      "legal-text": {
+        "role": "neutral",
+        "displayName": "Legal Text",
+        "canonical": "oklch(31.9% 0.035 269)",
+        "tonalRamp": [
+          "oklch(15% 0.035 269)",
+          "oklch(26% 0.035 269)",
+          "oklch(37% 0.035 269)",
+          "oklch(48% 0.035 269)",
+          "oklch(59% 0.035 269)",
+          "oklch(70% 0.035 269)",
+          "oklch(82% 0.035 269)",
+          "oklch(95% 0.035 269)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark theme)",
+        "canonical": "oklch(95.3% 0.015 274)",
+        "tonalRamp": [
+          "oklch(15% 0.015 274)",
+          "oklch(26% 0.015 274)",
+          "oklch(37% 0.015 274)",
+          "oklch(48% 0.015 274)",
+          "oklch(59% 0.015 274)",
+          "oklch(70% 0.015 274)",
+          "oklch(82% 0.015 274)",
+          "oklch(95% 0.015 274)"
+        ]
+      },
+      "ink-soft-dark": {
+        "role": "neutral",
+        "displayName": "Ink Soft (dark theme)",
+        "canonical": "oklch(84.4% 0.030 273)",
+        "tonalRamp": [
+          "oklch(15% 0.030 273)",
+          "oklch(26% 0.030 273)",
+          "oklch(37% 0.030 273)",
+          "oklch(48% 0.030 273)",
+          "oklch(59% 0.030 273)",
+          "oklch(70% 0.030 273)",
+          "oklch(82% 0.030 273)",
+          "oklch(95% 0.030 273)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Paper (dark theme)",
+        "canonical": "oklch(16.6% 0.026 269)",
+        "tonalRamp": [
+          "oklch(15% 0.026 269)",
+          "oklch(26% 0.026 269)",
+          "oklch(37% 0.026 269)",
+          "oklch(48% 0.026 269)",
+          "oklch(59% 0.026 269)",
+          "oklch(70% 0.026 269)",
+          "oklch(82% 0.026 269)",
+          "oklch(95% 0.026 269)"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Muted (dark theme)",
+        "canonical": "oklch(71.4% 0.041 271)",
+        "tonalRamp": [
+          "oklch(15% 0.041 271)",
+          "oklch(26% 0.041 271)",
+          "oklch(37% 0.041 271)",
+          "oklch(48% 0.041 271)",
+          "oklch(59% 0.041 271)",
+          "oklch(70% 0.041 271)",
+          "oklch(82% 0.041 271)",
+          "oklch(95% 0.041 271)"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark theme)",
+        "canonical": "oklch(29.0% 0.045 271)",
+        "tonalRamp": [
+          "oklch(15% 0.045 271)",
+          "oklch(26% 0.045 271)",
+          "oklch(37% 0.045 271)",
+          "oklch(48% 0.045 271)",
+          "oklch(59% 0.045 271)",
+          "oklch(70% 0.045 271)",
+          "oklch(82% 0.045 271)",
+          "oklch(95% 0.045 271)"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Surface (dark theme)",
+        "canonical": "oklch(20.7% 0.042 272)",
+        "tonalRamp": [
+          "oklch(15% 0.042 272)",
+          "oklch(26% 0.042 272)",
+          "oklch(37% 0.042 272)",
+          "oklch(48% 0.042 272)",
+          "oklch(59% 0.042 272)",
+          "oklch(70% 0.042 272)",
+          "oklch(82% 0.042 272)",
+          "oklch(95% 0.042 272)"
+        ]
+      },
+      "surface-alt-dark": {
+        "role": "neutral",
+        "displayName": "Surface Alt (dark theme)",
+        "canonical": "oklch(18.9% 0.032 267)",
+        "tonalRamp": [
+          "oklch(15% 0.032 267)",
+          "oklch(26% 0.032 267)",
+          "oklch(37% 0.032 267)",
+          "oklch(48% 0.032 267)",
+          "oklch(59% 0.032 267)",
+          "oklch(70% 0.032 267)",
+          "oklch(82% 0.032 267)",
+          "oklch(95% 0.032 267)"
+        ]
+      },
+      "band-navy-dark": {
+        "role": "neutral",
+        "displayName": "Band Navy (dark theme)",
+        "canonical": "oklch(22.9% 0.048 270)",
+        "tonalRamp": [
+          "oklch(15% 0.048 270)",
+          "oklch(26% 0.048 270)",
+          "oklch(37% 0.048 270)",
+          "oklch(48% 0.048 270)",
+          "oklch(59% 0.048 270)",
+          "oklch(70% 0.048 270)",
+          "oklch(82% 0.048 270)",
+          "oklch(95% 0.048 270)"
+        ]
+      },
+      "band-muted-dark": {
+        "role": "neutral",
+        "displayName": "Band Muted (dark theme)",
+        "canonical": "oklch(80.1% 0.036 273)",
+        "tonalRamp": [
+          "oklch(15% 0.036 273)",
+          "oklch(26% 0.036 273)",
+          "oklch(37% 0.036 273)",
+          "oklch(48% 0.036 273)",
+          "oklch(59% 0.036 273)",
+          "oklch(70% 0.036 273)",
+          "oklch(82% 0.036 273)",
+          "oklch(95% 0.036 273)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; two clauses, one per line."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles and the CTA band."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Case-study and featured-product titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Feature, card, pipeline and trust headings."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Section intros and hero support sentence, muted."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mono metadata: hosts, client lines, tags, pills."
+      }
+    },
+    "shadows": [
+      {
+        "name": "product-float",
+        "value": "0 24px 60px rgba(var(--shadow), 0.14)",
+        "purpose": "Browser frames and the school mock at rest."
+      },
+      {
+        "name": "mock-float",
+        "value": "0 20px 50px rgba(var(--shadow), 0.16)",
+        "purpose": "The Gastus mock card."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 18px 40px rgba(var(--shadow), 0.10)",
+        "purpose": "Solution cards on hover, with translateY(-4px)."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 12px 30px rgba(var(--shadow), 0.25)",
+        "purpose": "Primary button hover, with translateY(-2px)."
+      },
+      {
+        "name": "button-press",
+        "value": "0 4px 12px rgba(var(--shadow), 0.22)",
+        "purpose": "Primary button active state."
+      },
+      {
+        "name": "live-ring",
+        "value": "0 0 0 3px color-mix(in srgb, var(--accent-2) 22%, transparent)",
+        "purpose": "Status dot; pulses when motion is allowed."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "All transitions and entrances."
+      },
+      {
+        "name": "dur-1",
+        "value": "0.15s",
+        "purpose": "Buttons, links, toggles."
+      },
+      {
+        "name": "dur-2",
+        "value": "0.2s",
+        "purpose": "Cards, nav underline."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity + translateY(22px), 0.6s",
+        "purpose": "Scroll reveal, staggered 60–120ms; skipped under reduced motion."
+      },
+      {
+        "name": "hero-rise",
+        "value": "opacity + translateY(18px), 0.7s",
+        "purpose": "Hero entrance, staggered 0.05–0.42s."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-tight",
+        "value": "960px"
+      },
+      {
+        "name": "stack",
+        "value": "860px"
+      },
+      {
+        "name": "nav-hide",
+        "value": "720px"
+      },
+      {
+        "name": "grid-single",
+        "value": "520px"
+      },
+      {
+        "name": "mock-reflow",
+        "value": "420px"
+      },
+      {
+        "name": "actions-full",
+        "value": "400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action: request a proposal, email the studio.",
+      "html": "<button class=\"ds-btn-primary\">Solicitar una propuesta</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border:0; border-radius:12px; background:var(--invert-bg,#0b1020); color:var(--invert-text,#fff); font:600 0.98rem/1.2 \"IBM Plex Sans\", -apple-system, \"Segoe UI\", Roboto, sans-serif; cursor:pointer; transition:transform .15s cubic-bezier(0.22,1,0.36,1), box-shadow .15s cubic-bezier(0.22,1,0.36,1); } .ds-btn-primary:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(11,16,32,.25); } .ds-btn-primary:active { transform:translateY(1px) scale(.992); box-shadow:0 4px 12px rgba(11,16,32,.22); } .ds-btn-primary:focus-visible { outline:2px solid var(--accent,#4f6bff); outline-offset:3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action next to the primary, e.g. 'Ver casos de éxito'.",
+      "html": "<button class=\"ds-btn-ghost\">Ver casos de éxito</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; align-items:center; padding:13px 24px; border-radius:12px; background:var(--white,#fff); color:var(--ink,#0b1020); border:1px solid var(--line,#e6e8f0); font:600 0.98rem/1.2 \"IBM Plex Sans\", -apple-system, \"Segoe UI\", Roboto, sans-serif; cursor:pointer; transition:border-color .15s, color .15s; } .ds-btn-ghost:hover { border-color:var(--accent,#4f6bff); color:var(--accent,#4f6bff); } .ds-btn-ghost:focus-visible { outline:2px solid var(--accent,#4f6bff); outline-offset:3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Sticky header: plain links with a wipe-in underline and a dark CTA.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"is-active\">Casos</a><a href=\"#\">Servicios</a><a href=\"#\">Soluciones</a><a href=\"#\" class=\"ds-nav-cta\">Hablemos</a></nav>",
+      "css": ".ds-nav { display:flex; align-items:center; gap:28px; font:400 0.9375rem/1 \"IBM Plex Sans\", -apple-system, \"Segoe UI\", Roboto, sans-serif; color:var(--muted,#5b6270); } .ds-nav a { position:relative; color:inherit; text-decoration:none; } .ds-nav a:not(.ds-nav-cta)::after { content:''; position:absolute; left:0; right:0; bottom:-5px; height:2px; border-radius:2px; background:var(--accent,#4f6bff); transform:scaleX(0); transform-origin:left; transition:transform .2s cubic-bezier(0.22,1,0.36,1); } .ds-nav a:hover, .ds-nav a.is-active { color:var(--ink,#0b1020); } .ds-nav a:hover::after, .ds-nav a.is-active::after { transform:scaleX(1); } .ds-nav-cta { background:var(--invert-bg,#0b1020); color:var(--invert-text,#fff)!important; padding:9px 18px; border-radius:10px; font-weight:600; } .ds-nav a:focus-visible { outline:2px solid var(--accent,#4f6bff); outline-offset:3px; border-radius:4px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Mono category label on solution cards.",
+      "html": "<span class=\"ds-tag\">Fintech · En producción</span>",
+      "css": ".ds-tag { display:inline-block; font:500 0.72rem/1.4 \"IBM Plex Mono\", ui-monospace, monospace; letter-spacing:.02em; text-transform:uppercase; color:var(--accent,#4f6bff); background:color-mix(in srgb, var(--accent,#4f6bff) 10%, transparent); padding:4px 10px; border-radius:6px; }"
+    },
+    {
+      "name": "Feature Pill",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Checked capability chip under a featured product.",
+      "html": "<span class=\"ds-pill\">Cifrado a nivel de campo</span>",
+      "css": ".ds-pill { display:inline-flex; align-items:center; gap:5px; font:400 0.72rem/1.4 \"IBM Plex Mono\", ui-monospace, monospace; color:var(--ink,#0b1020); border:1px solid var(--line,#e6e8f0); border-radius:999px; padding:5px 11px 5px 9px; } .ds-pill::before { content:'✓'; color:var(--accent,#4f6bff); font-weight:700; }"
+    },
+    {
+      "name": "Solution Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Supporting product card; flat at rest, lifts on hover.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-tag\">Atención al cliente</span><h3>Portal de Clientes</h3><p>Portal cliente↔asesor con mensajería interna, roles y permisos y auditoría completa.</p></article>",
+      "css": ".ds-card { background:var(--white,#fff); border:1px solid var(--line,#e6e8f0); border-radius:16px; padding:30px; max-width:300px; transition:transform .2s cubic-bezier(0.22,1,0.36,1), box-shadow .2s, border-color .2s; } .ds-card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(11,16,32,.10); border-color:color-mix(in oklab, var(--accent,#4f6bff) 35%, var(--line,#e6e8f0)); } .ds-card h3 { font:700 1.2rem/1.18 \"Space Grotesk\", \"Segoe UI\", system-ui, sans-serif; letter-spacing:-.01em; margin:0 0 8px; color:var(--ink,#0b1020); } .ds-card p { font:400 1rem/1.65 \"IBM Plex Sans\", -apple-system, \"Segoe UI\", Roboto, sans-serif; color:var(--muted,#5b6270); margin:0; } .ds-card-tag { display:inline-block; margin-bottom:14px; font:500 0.72rem/1.4 \"IBM Plex Mono\", ui-monospace, monospace; text-transform:uppercase; letter-spacing:.02em; color:var(--accent,#4f6bff); background:color-mix(in srgb, var(--accent,#4f6bff) 10%, transparent); padding:4px 10px; border-radius:6px; }"
+    },
+    {
+      "name": "Browser Frame",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Signature frame for real product screenshots.",
+      "html": "<figure class=\"ds-browser\"><div class=\"ds-browser-bar\"><i></i><i></i><i></i><span>tumarka.cl</span></div><div class=\"ds-browser-body\"></div></figure>",
+      "css": ".ds-browser { margin:0; width:320px; background:var(--white,#fff); border:1px solid var(--line,#e6e8f0); border-radius:16px; overflow:hidden; box-shadow:0 24px 60px rgba(11,16,32,.14); } .ds-browser-bar { display:flex; align-items:center; gap:6px; padding:10px 14px; border-bottom:1px solid var(--line,#e6e8f0); } .ds-browser-bar i { width:9px; height:9px; border-radius:50%; background:rgba(11,16,32,.16); } .ds-browser-bar span { flex:1; max-width:180px; margin-left:auto; text-align:center; font:400 0.72rem/1.6 \"IBM Plex Mono\", ui-monospace, monospace; color:var(--muted,#5b6270); background:var(--paper,#f7f8fc); border:1px solid var(--line,#e6e8f0); border-radius:999px; } .ds-browser-body { height:150px; background:#14365f; }"
+    },
+    {
+      "name": "Pipeline",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Three connected stops on a blue→teal trace for a real sequence.",
+      "html": "<ol class=\"ds-pipe\"><li><span>Público</span><b>Sitio de ventas</b></li><li><span>Equipo interno</span><b>CRM interno</b></li><li><span>Clientes con acceso</span><b>Portal de clientes</b></li></ol>",
+      "css": ".ds-pipe { list-style:none; margin:0; padding:28px 0 0; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; position:relative; width:520px; } .ds-pipe::before { content:''; position:absolute; top:6px; left:6px; right:6px; height:2px; border-radius:2px; background:linear-gradient(90deg,#4f6bff,#00d4b3); } .ds-pipe li { position:relative; } .ds-pipe li::before { content:''; position:absolute; top:-28px; left:0; width:14px; height:14px; border-radius:50%; background:var(--paper,#f7f8fc); border:2px solid #4f6bff; box-sizing:border-box; } .ds-pipe li:last-child::before { border-color:#00d4b3; } .ds-pipe span { display:block; font:600 0.72rem/1.4 \"IBM Plex Mono\", ui-monospace, monospace; color:var(--accent,#4f6bff); } .ds-pipe b { display:block; margin-top:6px; font:700 1.1rem/1.18 \"Space Grotesk\", \"Segoe UI\", system-ui, sans-serif; color:var(--ink,#0b1020); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Circuito en producción",
+    "overview": "The site is drawn like a circuit that is already live. Signal blue is the current that connects things (links, actions, the traces in the logo and the closing band); production teal is the confirmation that something is running (the live dot, the end node of a pipeline, the last stop of a gradient). Deep navy and a cool, near-white paper carry everything else, so the two signals stay rare and readable.\n\nDensity is calm and editorial rather than dashboard-like: generous section spacing, a single 1080px column, and each section with its own composition (an editorial split for services, an asymmetric product case for each client, spec-sheet facts, a connected three-stop pipeline). Proof is shown, not described: real screenshots in browser frames, product mocks built in HTML, real numbers in a hairline spec grid. Light is the default; dark mode mirrors every token rather than inverting the page.\n\nThe visual rejection is explicit: it must never read as a generic AI template. No identical equal-weight card grids as a default, no emoji icons, no everything-centred layouts, no decorative gradient washes.",
+    "keyCharacteristics": [
+      "Navy + cool paper ground, two signal accents (blue connects, teal confirms).",
+      "Space Grotesk display over IBM Plex Sans body; IBM Plex Mono only for small technical labels (hosts, tags, chips).",
+      "Real product evidence framed as browser windows or HTML mocks.",
+      "Circuit traces as the one recurring motif, kept away from text.",
+      "Every section composed differently; motion is a reveal on an already-visible default."
+    ],
+    "rules": [
+      {
+        "name": "The Two Signals Rule",
+        "body": "Blue and teal are the only accents. Blue points and connects; teal confirms. No third hue enters the palette.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mirror Rule",
+        "body": "Dark mode is a full token mirror applied under prefers-color-scheme: dark (unless .theme-light) and under .theme-dark. Components never hard-code a theme colour; surfaces that must not flip (the CTA band, inverted buttons) have their own tokens.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Line Headline Rule",
+        "body": "The hero headline is two lines at every width, one clause per line. Cut words before shrinking type.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono-Is-Metadata Rule",
+        "body": "IBM Plex Mono never sets a sentence. It labels: a host, a client, a status, a number index.",
+        "section": "typography"
+      },
+      {
+        "name": "The Product-Floats Rule",
+        "body": "Only representations of real products float at rest. Cards, sections and text blocks are flat until hovered.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do show real products: screenshots in browser frames or HTML mocks of real modules, with real figures.",
+      "Do keep Signal Blue for connection and action and Production Teal for confirmation, and nothing else.",
+      "Do give each section its own composition and keep the hero headline to two lines at every width.",
+      "Do mirror every new colour in both dark-mode blocks (.theme-dark and the prefers-color-scheme query).",
+      "Do keep content visible without script: reveals and entrances only enhance an already-visible default, and prefers-reduced-motion removes travel.",
+      "Do keep circuit traces clear of text."
+    ],
+    "donts": [
+      "Don't use the raw logo_*.png brand-sheet crops; use assets/logo-clean.png.",
+      "Don't add emoji as icons, identical equal-weight card grids as a default, or everything-centred sections.",
+      "Don't add a third accent colour or a cream/beige ground.",
+      "Don't set sentences in IBM Plex Mono.",
+      "Don't invent testimonials, client logos, statistics or press.",
+      "Don't publish internal URLs of client systems (for example the Tu Marka CRM and portal)."
+    ]
+  }
+}

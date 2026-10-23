@@ -5,7 +5,7 @@ Marketing landing site for **C&B Digital Partners** — custom-software studio, 
 - Static HTML + hand-written `styles.css`. No framework, no build step. Deployed on Vercel.
 - Spanish (es). Pages: `index.html`, `privacidad.html`, `terminos.html`.
 - Brand assets in `assets/`: `logo-clean.png` (header/footer, transparent), `favicon.ico`. Other `logo_*.png` are raw brand-sheet crops (have caption text baked in) — do not use directly.
-- Design tokens live in `styles.css` `:root`. Full guidelines in `.impeccable.md`.
+- Design tokens live in `styles.css` `:root`. Product context in `PRODUCT.md`; visual system in `DESIGN.md` (+ `.impeccable/design.json`).
 
 ## Design Context
 
