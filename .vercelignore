@@ -1,0 +1,8 @@
+# Herramientas y documentación interna: viven en el repo, no se publican en el sitio
+.claude/
+.impeccable/
+PRODUCT.md
+DESIGN.md
+CLAUDE.md
+skills-lock.json
+.gitignore

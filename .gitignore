@@ -1,3 +1,7 @@
 .vercel
 .taste-skill
 .playwright-mcp
+# Ejecutable del detector de Impeccable (se descarga solo al primer uso)
+.claude/skills/impeccable/scripts/bin/
+# Configuración personal de Claude Code
+.claude/settings.local.json
