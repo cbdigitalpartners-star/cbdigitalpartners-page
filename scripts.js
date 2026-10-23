@@ -369,3 +369,57 @@
     new IntersectionObserver(function (e) { inView = e[0].isIntersecting; }, { threshold: 0.3 }).observe(deck);
   }
 })();
+
+// Contact brief: chosen needs pre-fill the email; a copy button for when no mail app is set up.
+(function () {
+  var mail = document.querySelector("[data-mail]");
+  var pick = document.querySelector(".cta-pick");
+  var copy = document.querySelector(".cta-copy");
+  var status = document.querySelector(".cta-status");
+  if (!mail) return;
+  var ADDRESS = "contacto@cbdigitalpartners.cl";
+
+  function build(needs) {
+    var subject = needs.length ? "Propuesta: " + needs.join(" + ") : "Propuesta de software";
+    var body = "Hola, equipo de C&B:\n\n" +
+      "Qué necesitamos: " + (needs.length ? needs.join("; ") : "") + "\n" +
+      "Para qué lo usaría nuestro equipo:\n" +
+      "Plazo ideal:\n" +
+      "Sistemas que ya usamos:\n\nGracias.";
+    return "mailto:" + ADDRESS + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+
+  if (pick) {
+    pick.hidden = false;
+    var chips = [].slice.call(pick.querySelectorAll("button"));
+    chips.forEach(function (b) {
+      b.addEventListener("click", function () {
+        b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true"));
+        var needs = chips.filter(function (c) { return c.getAttribute("aria-pressed") === "true"; })
+          .map(function (c) { return c.dataset.need; });
+        mail.href = build(needs);
+      });
+    });
+  }
+
+  if (copy && status) {
+    copy.hidden = false;
+    var label = copy.querySelector("span");
+    var timer;
+    function done(ok) {
+      status.textContent = ok
+        ? "Correo copiado: " + ADDRESS
+        : "No se pudo copiar automáticamente. El correo es " + ADDRESS;
+      if (ok) label.textContent = "Copiado";
+      clearTimeout(timer);
+      timer = setTimeout(function () { label.textContent = "Copiar correo"; }, 2400);
+    }
+    copy.addEventListener("click", function () {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(ADDRESS).then(function () { done(true); }, function () { done(false); });
+      } else {
+        done(false);
+      }
+    });
+  }
+})();

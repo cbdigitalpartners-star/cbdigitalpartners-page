@@ -99,7 +99,7 @@
             </div>
             <div class="deck-tabs" role="group" aria-label="Ver producto" hidden>
               <button type="button" data-key="tumarka" aria-pressed="true">Tu Marka</button>
-              <button type="button" data-key="contempora" aria-pressed="false"><span class="deck-long">Colegio&nbsp;</span>Contempora</button>
+              <button type="button" data-key="contempora" aria-pressed="false"><span><span class="deck-long">Colegio </span>Contempora</span></button>
               <button type="button" data-key="gastus" aria-pressed="false">Gastus <span class="deck-beta">beta</span></button>
             </div>
           </div>
@@ -374,8 +374,24 @@
             </g>
           </svg>
           <h2>¿Tienes un proyecto de software en mente?</h2>
-          <p>Escríbenos y armamos una propuesta a la medida de tu negocio.</p>
-          <a href="mailto:contacto@cbdigitalpartners.cl" class="btn btn-primary magnetic">contacto@cbdigitalpartners.cl</a>
+          <p>Cuéntanos qué necesitas, para cuándo y con qué sistemas trabaja tu equipo. Con eso armamos una propuesta a la medida de tu negocio.</p>
+          <fieldset class="cta-pick" hidden>
+            <legend>¿Qué necesitas?</legend>
+            <div class="cta-chips">
+              <button type="button" aria-pressed="false" data-need="Una plataforma o portal web">Plataforma o portal</button>
+              <button type="button" aria-pressed="false" data-need="Un CRM o herramienta interna">CRM o herramienta interna</button>
+              <button type="button" aria-pressed="false" data-need="Integrar WhatsApp, Instagram o TikTok">Mensajería</button>
+              <button type="button" aria-pressed="false" data-need="Automatizar procesos o aplicar IA">Automatización o IA</button>
+            </div>
+          </fieldset>
+          <div class="cta-actions">
+            <a href="mailto:contacto@cbdigitalpartners.cl?subject=Propuesta%20de%20software&amp;body=Hola%2C%20equipo%20de%20C%26B%3A%0A%0AQu%C3%A9%20necesitamos%3A%0APara%20qu%C3%A9%20lo%20usar%C3%ADa%20nuestro%20equipo%3A%0APlazo%20ideal%3A%0ASistemas%20que%20ya%20usamos%3A%0A%0AGracias." class="btn btn-primary magnetic" data-mail aria-label="Escribir a contacto@cbdigitalpartners.cl"><span>Escribir<span class="mail-long"> a contacto@cbdigitalpartners.cl</span><span class="mail-short"> un correo</span></span></a>
+            <button type="button" class="cta-copy" data-copy="contacto@cbdigitalpartners.cl" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+              <span>Copiar correo</span>
+            </button>
+          </div>
+          <p class="cta-status" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
