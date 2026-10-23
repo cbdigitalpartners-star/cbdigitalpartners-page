@@ -8,6 +8,7 @@ colors:
   muted: "#5b6270"
   line: "#e6e8f0"
   signal-blue: "#4f6bff"
+  signal-blue-text: "#3b55e6"
   production-teal: "#00d4b3"
   surface: "#ffffff"
   surface-alt: "#eef1fb"
@@ -146,7 +147,8 @@ The visual rejection is explicit: it must never read as a generic AI template. N
 A restrained navy-and-paper system where two saturated signals do all the pointing.
 
 ### Primary
-- **Signal Blue** (#4f6bff; dark #7488ff): links, the accent clause of the hero headline, focus rings, tags, active nav underline, circuit traces, pipeline nodes. The colour of "this connects to something".
+- **Signal Blue** (#4f6bff; dark #7488ff): the accent clause of the hero headline, focus rings, active nav underline, circuit traces, pipeline nodes, borders and fills. The colour of "this connects to something".
+- **Signal Blue Text** (#3b55e6; dark #7488ff): the same signal, one step deeper, for every small blue text: links, tags, case and pipeline labels, list numbers, the active role in mocks. Passes 4.5:1 on paper, white and 10% blue tints.
 
 ### Secondary
 - **Production Teal** (#00d4b3): confirmation only. The live status dot, the final node of a pipeline, the end stop of the blue→teal bar and scroll-progress gradients, the AI module in the school mock. Never used for text.
@@ -164,6 +166,8 @@ A restrained navy-and-paper system where two saturated signals do all the pointi
 
 ### Named Rules
 **The Two Signals Rule.** Blue and teal are the only accents. Blue points and connects; teal confirms. No third hue enters the palette.
+
+**The Readable Signal Rule.** Small text never uses Signal Blue (#4f6bff); it uses Signal Blue Text (`--accent-text`). Signal Blue stays for strokes, fills, focus rings and display-size type.
 
 **The Mirror Rule.** Dark mode is a full token mirror applied under `prefers-color-scheme: dark` (unless `.theme-light`) and under `.theme-dark`. Components never hard-code a theme colour; surfaces that must not flip (the CTA band, inverted buttons) have their own tokens.
 
@@ -257,6 +261,7 @@ Softly rounded rectangles throughout, scaled to the element: 6px for tags and mo
 ### Do:
 - **Do** show real products: screenshots in browser frames or HTML mocks of real modules, with real figures.
 - **Do** keep Signal Blue for connection and action and Production Teal for confirmation, and nothing else.
+- **Do** set small blue text in `--accent-text` (#3b55e6 light, #7488ff dark), never in `--accent`.
 - **Do** give each section its own composition and keep the hero headline to two lines at every width.
 - **Do** mirror every new colour in both dark-mode blocks (`.theme-dark` and the `prefers-color-scheme` query).
 - **Do** keep content visible without script: reveals and entrances only enhance an already-visible default, and `prefers-reduced-motion` removes travel.

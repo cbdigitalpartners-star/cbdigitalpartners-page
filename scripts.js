@@ -1,3 +1,15 @@
+// Phones: case details start collapsed; desktop always shows them.
+(function () {
+  var more = document.querySelectorAll(".case-more");
+  if (!more.length || !window.matchMedia) return;
+  var phone = window.matchMedia("(max-width: 720px)");
+  if (phone.matches) more.forEach(function (d) { d.removeAttribute("open"); });
+  // The summary is hidden on wider screens, so make sure the content is shown there.
+  phone.addEventListener("change", function (e) {
+    if (!e.matches) more.forEach(function (d) { d.setAttribute("open", ""); });
+  });
+})();
+
 // C&B Digital Partners — progressive enhancement (delight only, no core deps)
 
 // Theme toggle — flips light/dark, persists choice, defaults to system.
@@ -109,6 +121,14 @@
   }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
 
   sections.forEach(function (s) { spy.observe(s); });
+
+  // Back on the hero, no section is current.
+  var hero = document.querySelector(".hero");
+  if (hero) {
+    new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) setActive(null);
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 }).observe(hero);
+  }
 })();
 
 // Gastus mock — 3D tilt toward cursor (fine pointer + motion only).
@@ -190,4 +210,162 @@
     kick();
   });
   band.addEventListener("pointerleave", function () { mxT = myT = 0; kick(); });
+})();
+
+// Tu Marka live pipeline: a client travels Sitio → CRM → Portal.
+// Enhancement only: without script or with reduced motion every event stays visible.
+(function () {
+  var ol = document.querySelector(".pipeline");
+  if (!ol || !ol.animate || !("IntersectionObserver" in window)) return;
+  if (!(window.matchMedia && matchMedia("(prefers-reduced-motion: no-preference)").matches)) return;
+
+  var stops = [].slice.call(ol.children);
+  var vertical = matchMedia("(max-width: 860px)");
+  var EASE = "cubic-bezier(0.25, 1, 0.5, 1)";
+  var run = 0, current = 0;
+
+  var fill = document.createElement("span");
+  fill.className = "pipe-fill";
+  var token = document.createElement("span");
+  token.className = "pipe-token";
+  fill.setAttribute("aria-hidden", "true");
+  token.setAttribute("aria-hidden", "true");
+  ol.appendChild(fill);
+  ol.appendChild(token);
+
+  var btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "pipe-replay";
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Repetir recorrido';
+  var head = document.querySelector(".pipe-head");
+  if (head) head.appendChild(btn);
+
+  // Geometry of stop i, relative to the list.
+  function geo(i) {
+    var li = stops[i];
+    if (vertical.matches) {
+      var y = li.offsetTop + 2, len = ol.clientHeight - 12;
+      return { t: "translate(0px," + y + "px)", f: "scaleY(" + Math.min(1, (y + 1) / len) + ")" };
+    }
+    var x = li.offsetLeft, w = ol.clientWidth - 12;
+    return { t: "translate(" + x + "px,0px)", f: "scaleX(" + Math.min(1, (x + 1) / w) + ")" };
+  }
+  function place(i) {
+    var g = geo(i);
+    token.style.transform = g.t;
+    fill.style.transform = g.f;
+  }
+  function wait(ms, id) {
+    return new Promise(function (res, rej) {
+      setTimeout(function () { id === run ? res() : rej(); }, ms);
+    });
+  }
+  function reset() {
+    stops.forEach(function (li) {
+      li.classList.remove("is-reached");
+      li.querySelectorAll(".pipe-events li").forEach(function (e) { e.classList.remove("is-on"); });
+    });
+    current = 0;
+    token.classList.remove("is-done");
+    place(0);
+  }
+
+  function play() {
+    var id = ++run;
+    btn.disabled = true;
+    ol.classList.add("is-live");
+    reset();
+    var chain = wait(250, id);
+    stops.forEach(function (li, i) {
+      chain = chain.then(function () {
+        if (i === 0) return;
+        var from = geo(current), to = geo(i);
+        current = i;
+        var opts = { duration: 950, easing: EASE, fill: "forwards" };
+        var a = token.animate([{ transform: from.t }, { transform: to.t }], opts);
+        var b = fill.animate([{ transform: from.f }, { transform: to.f }], opts);
+        return b.finished.then(function () {
+          place(i); a.cancel(); b.cancel(); // hand the end state back to inline styles
+        });
+      }).then(function () {
+        li.classList.add("is-reached");
+        var events = li.querySelectorAll(".pipe-events li");
+        var c = wait(320, id);
+        events.forEach(function (ev) {
+          c = c.then(function () { ev.classList.add("is-on"); return wait(560, id); });
+        });
+        return c;
+      });
+    });
+    chain.then(function () { token.classList.add("is-done"); btn.disabled = false; }, function () {});
+  }
+
+  btn.addEventListener("click", play);
+  vertical.addEventListener("change", function () { place(current); });
+  window.addEventListener("resize", function () { place(current); });
+
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { io.disconnect(); play(); }
+  }, { threshold: 0.45 });
+  io.observe(ol);
+})();
+
+// Hero deck: pick which product window sits in front.
+// Without script the deck is a static stack; with reduced motion it switches instantly and never rotates.
+(function () {
+  var deck = document.querySelector("[data-deck]");
+  var tabs = document.querySelector(".deck-tabs");
+  if (!deck || !tabs) return;
+
+  var cards = {};
+  [].forEach.call(deck.querySelectorAll(".deck-card"), function (c) { cards[c.dataset.key] = c; });
+  var order = Object.keys(cards).sort(function (a, b) { return cards[a].dataset.slot - cards[b].dataset.slot; });
+  var buttons = [].slice.call(tabs.querySelectorAll("button"));
+  tabs.hidden = false;
+
+  function render() {
+    order.forEach(function (key, i) { cards[key].dataset.slot = String(i); });
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.key === order[0])); });
+  }
+  function select(key) {
+    if (!cards[key] || order[0] === key) return;
+    order = [key].concat(order.filter(function (k) { return k !== key; }));
+    render();
+  }
+
+  // Gentle rotation until the visitor takes over.
+  var motionOK = window.matchMedia && matchMedia("(prefers-reduced-motion: no-preference)").matches;
+  var timer = null, paused = false, inView = true, stopped = !motionOK;
+  function stop() { stopped = true; clearInterval(timer); }
+  function tick() {
+    if (stopped || paused || !inView || document.hidden) return;
+    order.push(order.shift());
+    render();
+  }
+  if (!stopped) timer = setInterval(tick, 5200);
+
+  function take(key) { stop(); select(key); }
+  buttons.forEach(function (b) { b.addEventListener("click", function () { take(b.dataset.key); }); });
+  Object.keys(cards).forEach(function (key) {
+    cards[key].addEventListener("click", function () { take(key); });
+  });
+
+  // Hover or focus on a client name in the proof line previews its window.
+  var links = { "#caso-tumarka": "tumarka", "#caso-contempora": "contempora", "#gastus": "gastus" };
+  [].forEach.call(document.querySelectorAll(".hero-proof a"), function (a) {
+    var key = links[a.getAttribute("href")];
+    if (!key) return;
+    a.addEventListener("pointerenter", function () { take(key); });
+    a.addEventListener("focus", function () { take(key); });
+  });
+
+  [deck, tabs].forEach(function (el) {
+    el.addEventListener("pointerenter", function () { paused = true; });
+    el.addEventListener("pointerleave", function () { paused = false; });
+    el.addEventListener("focusin", function () { paused = true; });
+    el.addEventListener("focusout", function () { paused = false; });
+  });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { inView = e[0].isIntersecting; }, { threshold: 0.3 }).observe(deck);
+  }
 })();

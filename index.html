@@ -6,14 +6,14 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f8fc" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0e1a" />
   <title>C&amp;B Digital Partners — Desarrollo de software a medida</title>
-  <meta name="description" content="Estudio de desarrollo de software en Chile. Construimos plataformas web, portales, software financiero e integraciones a medida — de calidad, seguras y listas para producción." />
+  <meta name="description" content="Estudio de desarrollo de software en Santiago, Chile. Plataformas web, portales, CRM e integraciones a medida, en producción para clientes reales." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.cbdigitalpartners.cl/" />
   <meta property="og:title" content="C&amp;B Digital Partners — Desarrollo de software a medida" />
-  <meta property="og:description" content="Estudio de desarrollo en Chile. Plataformas web, portales, software financiero e integraciones a medida — de calidad, seguras y listas para producción." />
+  <meta property="og:description" content="Estudio de desarrollo de software en Santiago, Chile. Plataformas web, portales, CRM e integraciones a medida, en producción para clientes reales." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="C&amp;B Digital Partners — Desarrollo de software a medida" />
-  <meta name="twitter:description" content="Plataformas web, portales, software financiero e integraciones a medida — de calidad, seguras y listas para producción." />
+  <meta name="twitter:description" content="Plataformas web, portales, CRM e integraciones a medida, en producción para clientes reales." />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <meta property="og:image" content="https://www.cbdigitalpartners.cl/assets/og-banner.png" />
   <meta property="og:image:width" content="1200" />
@@ -59,17 +59,49 @@
               <a href="#contacto" class="btn btn-primary">Solicitar una propuesta</a>
               <a href="#casos" class="btn btn-ghost">Ver casos de éxito</a>
             </div>
-            <p class="hero-proof">En producción para <a href="#caso-contempora">Colegio&nbsp;Contempora</a>, <a href="#caso-tumarka">Tu&nbsp;Marka</a> y <a href="#soluciones">Gastus</a>.</p>
+            <p class="hero-proof">En producción para <a href="#caso-contempora">Colegio&nbsp;Contempora</a> y <a href="#caso-tumarka">Tu&nbsp;Marka</a>. En beta abierta: <a href="#gastus">Gastus</a>.</p>
           </div>
-          <div class="hero-shots">
-            <figure class="browser shot-back">
-              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>tumarka.cl</span></div>
-              <img src="assets/case-tumarka.webp" alt="Portada de tumarka.cl, sitio de registro de marcas ante INAPI." width="960" height="461" decoding="async" />
-            </figure>
-            <figure class="browser shot-front">
-              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gastus.cl</span></div>
-              <img src="assets/hero-gastus.webp" alt="Portada de gastus.cl: «Tu plata chilena, en un solo lugar», con el saldo consolidado y movimientos importados de cartolas bancarias." width="1000" height="601" fetchpriority="high" decoding="async" />
-            </figure>
+          <div class="hero-media">
+            <div class="hero-shots deck" data-deck>
+              <figure class="browser deck-card" data-key="tumarka" data-slot="0">
+                <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>tumarka.cl</span></div>
+                <div class="deck-body">
+                  <img src="assets/case-tumarka.webp" alt="Portada de tumarka.cl: «Protege tu marca ante INAPI, 100% online», con pago en hasta 5 cuotas." width="960" height="461" fetchpriority="high" decoding="async" />
+                </div>
+              </figure>
+              <figure class="browser deck-card" data-key="contempora" data-slot="1">
+                <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>Plataforma · Colegio Contempora</span></div>
+                <div class="deck-body deck-mock" role="img" aria-label="Plataforma de Colegio Contempora: vistas por rol (dirección, profesores, apoderados, alumnos) y módulos de notas, asistencia, libro de clases, comunicados, matrícula y asistente IA.">
+                  <div class="sm-main" aria-hidden="true">
+                    <ul class="sm-roles">
+                      <li class="is-on">Dirección</li>
+                      <li>Profesor/a</li>
+                      <li>Apoderado/a</li>
+                      <li>Alumno/a</li>
+                    </ul>
+                    <div class="sm-mods">
+                      <span>Notas</span>
+                      <span>Asistencia</span>
+                      <span>Libro de clases</span>
+                      <span>Comunicados</span>
+                      <span>Matrícula</span>
+                      <span class="sm-ai">Asistente IA</span>
+                    </div>
+                  </div>
+                </div>
+              </figure>
+              <figure class="browser deck-card" data-key="gastus" data-slot="2">
+                <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gastus.cl</span></div>
+                <div class="deck-body">
+                  <img src="assets/hero-gastus.webp" alt="Portada de gastus.cl: «Tu plata chilena, en un solo lugar», con el saldo consolidado y movimientos importados de cartolas bancarias." width="1000" height="601" decoding="async" />
+                </div>
+              </figure>
+            </div>
+            <div class="deck-tabs" role="group" aria-label="Ver producto" hidden>
+              <button type="button" data-key="tumarka" aria-pressed="true">Tu Marka</button>
+              <button type="button" data-key="contempora" aria-pressed="false"><span class="deck-long">Colegio&nbsp;</span>Contempora</button>
+              <button type="button" data-key="gastus" aria-pressed="false">Gastus <span class="deck-beta">beta</span></button>
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +111,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2 id="casos-title">Casos de éxito</h2>
-          <p>Dos clientes, dos problemas distintos. Lo que construimos y cómo funciona hoy.</p>
+          <p>Un colegio y una empresa de registro de marcas: qué construimos para cada uno y cómo funciona hoy.</p>
         </div>
 
         <!-- Caso 1: Colegio Contempora -->
@@ -92,13 +124,16 @@
               <div><dt>Estudiantes</dt><dd>211</dd></div>
               <div><dt>Profesores</dt><dd>28</dd></div>
               <div><dt>Roles con permisos propios</dt><dd>11</dd></div>
-              <div><dt>Tablas en el modelo de datos</dt><dd>140</dd></div>
+              <div><dt>Tablas en la base de datos</dt><dd>140</dd></div>
             </dl>
-            <ul class="case-scope">
-              <li><strong>Académico:</strong> calificaciones, asistencia, libro de clases, planificaciones con objetivos MINEDUC, tareas con rúbricas.</li>
-              <li><strong>Comunidad:</strong> comunicados con confirmación de lectura, mensajería, matrícula y retiros autorizados para apoderados.</li>
-              <li><strong>Operación:</strong> biblioteca, inventario, reservas de salas, presupuesto y auditoría de cada acción.</li>
-            </ul>
+            <details class="case-more" open>
+              <summary>Qué incluye la plataforma</summary>
+              <ul class="case-scope">
+                <li><strong>Académico:</strong> calificaciones, asistencia, libro de clases, planificaciones con objetivos MINEDUC, tareas con rúbricas.</li>
+                <li><strong>Comunidad:</strong> comunicados con confirmación de lectura, mensajería, matrícula y retiros autorizados para apoderados.</li>
+                <li><strong>Operación:</strong> biblioteca, inventario, reservas de salas, presupuesto y auditoría de cada acción.</li>
+              </ul>
+            </details>
             <a href="https://colegia.colegiocontempora.com/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Visitar el sitio de Colegio Contempora (abre en una pestaña nueva)">Ver el sitio del colegio →</a>
           </div>
           <div class="case-media" aria-hidden="true">
@@ -144,23 +179,43 @@
               <img src="assets/case-tumarka.webp" alt="Portada de tumarka.cl: «Protege tu marca ante INAPI, 100% online», con botón para registrar la marca y pago en hasta 5 cuotas." width="960" height="461" loading="lazy" decoding="async" />
             </div>
           </figure>
-          <ol class="pipeline">
-            <li>
-              <span class="pipe-host">Público</span>
-              <h4>Sitio de ventas</h4>
-              <p>Cotización y pago online con Flow, al contado o en 5 cuotas. Cada compra entra directo al CRM como oportunidad.</p>
-            </li>
-            <li>
-              <span class="pipe-host">Equipo interno</span>
-              <h4>CRM interno</h4>
-              <p>Pipeline comercial, informe de factibilidad redactado con IA y enviado en PDF, seguimiento de 15 etapas ante INAPI con plazos legales, y cobranza de cuotas con alertas automáticas.</p>
-            </li>
-            <li>
-              <span class="pipe-host">Clientes con acceso</span>
-              <h4>Portal de clientes</h4>
-              <p>Cada cliente ve el avance de su marca, descarga documentos, sube lo que se le pide y revisa sus pagos. El acceso se verifica en cada solicitud.</p>
-            </li>
-          </ol>
+          <div class="pipe-wrap">
+            <div class="pipe-head">
+              <p class="pipe-caption">Así avanza un cliente, de la compra al portal.</p>
+            </div>
+            <ol class="pipeline">
+              <li>
+                <span class="pipe-host">Público</span>
+                <h4>Sitio de ventas</h4>
+                <p>Cotización y pago online con Flow, al contado o en 5 cuotas. Cada compra entra directo al CRM como oportunidad.</p>
+                <ul class="pipe-events">
+                  <li>Cotiza su registro en tumarka.cl</li>
+                  <li>Paga con Flow: cuota 1 de 5</li>
+                  <li>La compra entra al CRM</li>
+                </ul>
+              </li>
+              <li>
+                <span class="pipe-host">Equipo interno</span>
+                <h4>CRM interno</h4>
+                <p>Pipeline comercial, informe de factibilidad redactado con IA y enviado en PDF, seguimiento de 15 etapas ante INAPI con plazos legales, y cobranza de cuotas con alertas automáticas.</p>
+                <ul class="pipe-events">
+                  <li>Informe de factibilidad redactado con IA, enviado en PDF</li>
+                  <li>Expediente ante INAPI: etapa 7 de 15, con plazos legales</li>
+                  <li>Alerta automática: vence la cuota 2</li>
+                </ul>
+              </li>
+              <li>
+                <span class="pipe-host">Clientes con acceso</span>
+                <h4>Portal de clientes</h4>
+                <p>Cada cliente ve el avance de su marca, descarga documentos, sube lo que se le pide y revisa sus pagos. El acceso se verifica en cada solicitud.</p>
+                <ul class="pipe-events">
+                  <li>Acceso al portal activado</li>
+                  <li>Ve en qué etapa va su marca</li>
+                  <li>Sube el documento que le pidió el equipo</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
         </article>
       </div>
     </section>
@@ -183,7 +238,7 @@
             <span class="feature-num">01</span>
             <div class="feature-body">
               <h3>Desarrollo a medida</h3>
-              <p>Plataformas web, portales y herramientas internas a la medida de tu equipo — código de calidad, seguro y listo para producción, con soporte y mantención continua.</p>
+              <p>Plataformas web, portales y herramientas internas a la medida de tu equipo, con soporte y mantención después del lanzamiento.</p>
             </div>
           </li>
           <li class="feature">
@@ -197,7 +252,7 @@
             <span class="feature-num">03</span>
             <div class="feature-body">
               <h3>Integraciones de mensajería</h3>
-              <p>Lo más reciente: conectamos TikTok, WhatsApp e Instagram a un panel central mediante sus APIs oficiales, para gestionar conversaciones en un solo lugar.</p>
+              <p>Conectamos TikTok, WhatsApp e Instagram a un panel central mediante sus APIs oficiales, para atender todas las conversaciones en un solo lugar.</p>
             </div>
           </li>
           <li class="feature">
@@ -215,10 +270,10 @@
       <div class="wrap">
         <div class="section-head">
           <h2>Soluciones que construimos</h2>
-          <p>Productos en producción, sobre bases seguras: roles y permisos, datos cifrados y APIs oficiales.</p>
+          <p>Productos en uso, sobre bases seguras: roles y permisos, datos cifrados y APIs oficiales.</p>
         </div>
         <div class="solutions">
-          <article class="card sol-feature">
+          <article class="card sol-feature" id="gastus">
             <div class="sol-feature-media">
               <div class="gastus-mock" aria-hidden="true">
                 <div class="gm-head">
@@ -240,7 +295,7 @@
               </div>
             </div>
             <div class="sol-feature-body">
-              <span class="tag">Fintech · En producción</span>
+              <span class="tag">Fintech · Beta abierta</span>
               <h3>Gastus — Finanzas personales</h3>
               <p>Importa cartolas de los principales bancos chilenos, categoriza movimientos con IA y detecta gastos recurrentes — pensado para Chile: pesos, cartolas y bancos locales.</p>
               <ul class="feat-pills">
@@ -256,7 +311,7 @@
           <div class="sol-grid">
             <article class="card">
               <span class="tag">Atención al cliente</span>
-              <h3>Portal de Clientes</h3>
+              <h3>Portal de clientes</h3>
               <p>Portal cliente↔asesor con mensajería interna en tiempo real, roles y permisos, dashboard de KPIs (tasa de resolución, tiempo de respuesta, carga por asesor) y auditoría completa de cada acción.</p>
             </article>
             <article class="card">
