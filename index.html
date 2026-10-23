@@ -50,43 +50,28 @@
 
   <main id="main">
     <section class="hero">
-      <div class="hero-deco" aria-hidden="true">
-        <svg viewBox="0 0 560 460" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g class="traces" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 64 H150 V40 H262" stroke="var(--accent)" />
-            <path d="M0 124 H220" stroke="var(--ink)" opacity="0.55" />
-            <path d="M0 184 H118 V150 H300 V118 H384" stroke="var(--accent)" />
-            <path d="M0 250 H268" stroke="var(--ink)" opacity="0.55" />
-            <path d="M384 118 V214 H478" stroke="var(--accent)" />
-            <path d="M0 316 H182 V348 H326" stroke="var(--ink)" opacity="0.55" />
-            <path d="M0 380 H244 V416 H372" stroke="var(--accent)" />
-          </g>
-          <g class="nodes">
-            <circle cx="262" cy="40" r="5" fill="var(--accent)" />
-            <circle cx="220" cy="124" r="5" fill="var(--ink)" />
-            <circle cx="384" cy="118" r="6" fill="none" stroke="var(--accent)" stroke-width="2" />
-            <circle cx="268" cy="250" r="5" fill="var(--ink)" />
-            <circle cx="478" cy="214" r="5" fill="var(--accent)" />
-            <circle cx="326" cy="348" r="5" fill="var(--ink)" />
-            <circle cx="372" cy="416" r="6" fill="none" stroke="var(--accent)" stroke-width="2" />
-          </g>
-          <g class="pulses">
-            <circle class="pulse" r="3.5" fill="var(--accent)" style="offset-path: path('M0 64 H150 V40 H262')" />
-            <circle class="pulse" r="3.5" fill="var(--accent)" style="offset-path: path('M0 184 H118 V150 H300 V118 H384')" />
-            <circle class="pulse" r="3.5" fill="var(--accent)" style="offset-path: path('M384 118 V214 H478')" />
-            <circle class="pulse" r="3.5" fill="var(--accent)" style="offset-path: path('M0 250 H268')" />
-            <circle class="pulse" r="3.5" fill="var(--accent)" style="offset-path: path('M0 380 H244 V416 H372')" />
-          </g>
-        </svg>
-      </div>
       <div class="wrap hero-content">
-        <h1>Construimos <span>software a medida</span> de calidad, listo para producción.</h1>
-        <p class="lead">Plataformas web, integraciones de mensajería y automatización — seguras, escalables y ya en producción.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Solicitar una propuesta</a>
-          <a href="#casos" class="btn btn-ghost">Ver casos de éxito</a>
+        <h1><span>Software a medida,</span> listo para producción.</h1>
+        <div class="hero-row">
+          <div class="hero-copy">
+            <p class="lead">Plataformas web, portales, CRM e integraciones de mensajería para empresas en Chile. Seguras, escalables y con soporte continuo.</p>
+            <div class="hero-actions">
+              <a href="#contacto" class="btn btn-primary">Solicitar una propuesta</a>
+              <a href="#casos" class="btn btn-ghost">Ver casos de éxito</a>
+            </div>
+            <p class="hero-proof">En producción para <a href="#caso-contempora">Colegio&nbsp;Contempora</a>, <a href="#caso-tumarka">Tu&nbsp;Marka</a> y <a href="#soluciones">Gastus</a>.</p>
+          </div>
+          <div class="hero-shots">
+            <figure class="browser shot-back">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>tumarka.cl</span></div>
+              <img src="assets/case-tumarka.webp" alt="Portada de tumarka.cl, sitio de registro de marcas ante INAPI." width="960" height="461" decoding="async" />
+            </figure>
+            <figure class="browser shot-front">
+              <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gastus.cl</span></div>
+              <img src="assets/hero-gastus.webp" alt="Portada de gastus.cl: «Tu plata chilena, en un solo lugar», con el saldo consolidado y movimientos importados de cartolas bancarias." width="1000" height="601" fetchpriority="high" decoding="async" />
+            </figure>
+          </div>
         </div>
-        <p class="hero-proof">En producción para <a href="#caso-contempora">Colegio&nbsp;Contempora</a>, <a href="#caso-tumarka">Tu&nbsp;Marka</a> y <a href="#soluciones">Gastus</a>.</p>
       </div>
     </section>
 
@@ -185,6 +170,13 @@
         <div class="split-head">
           <h2>Qué hacemos</h2>
           <p>Diseñamos y desarrollamos plataformas, portales e integraciones a la medida de cómo trabaja tu equipo.</p>
+          <dl class="stack">
+            <div><dt>Aplicaciones</dt><dd>Next.js, React y TypeScript</dd></div>
+            <div><dt>Datos</dt><dd>PostgreSQL sobre Supabase, con permisos por fila</dd></div>
+            <div><dt>Infraestructura</dt><dd>Vercel y Edge Functions</dd></div>
+            <div><dt>IA</dt><dd>Claude, OpenAI y Gemini</dd></div>
+            <div><dt>Pagos y correo</dt><dd>Flow y Resend</dd></div>
+          </dl>
         </div>
         <ol class="features">
           <li class="feature">

@@ -85,43 +85,6 @@
   targets.forEach(function (el) { io.observe(el); });
 })();
 
-// Hero circuit: subtle parallax tilt toward the cursor (fine pointers only).
-(function () {
-  var deco = document.querySelector(".hero-deco");
-  var hero = document.querySelector(".hero");
-  if (!deco || !hero) return;
-
-  var fine = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
-  var motionOK = window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
-  if (!fine || !motionOK) return;
-
-  var MAX_X = 16, MAX_Y = 11, MAX_R = 2.6;
-  var tx = 0, ty = 0, rot = 0, txT = 0, tyT = 0, rotT = 0, raf = null;
-
-  function loop() {
-    tx += (txT - tx) * 0.08;
-    ty += (tyT - ty) * 0.08;
-    rot += (rotT - rot) * 0.08;
-    deco.style.setProperty("--tx", tx.toFixed(2) + "px");
-    deco.style.setProperty("--ty", ty.toFixed(2) + "px");
-    deco.style.setProperty("--rot", rot.toFixed(3) + "deg");
-    if (Math.abs(txT - tx) > 0.1 || Math.abs(tyT - ty) > 0.1 || Math.abs(rotT - rot) > 0.01) {
-      raf = requestAnimationFrame(loop);
-    } else { raf = null; }
-  }
-  function kick() { if (!raf) raf = requestAnimationFrame(loop); }
-
-  hero.addEventListener("pointermove", function (e) {
-    var r = hero.getBoundingClientRect();
-    var nx = (e.clientX - r.left) / r.width - 0.5;
-    var ny = (e.clientY - r.top) / r.height - 0.5;
-    txT = nx * MAX_X; tyT = ny * MAX_Y; rotT = nx * MAX_R;
-    kick();
-  });
-  hero.addEventListener("pointerleave", function () { txT = tyT = rotT = 0; kick(); });
-})();
-
 // Scrollspy: light the nav link of the section in view. IntersectionObserver,
 // not scroll events — event-driven, no per-frame work.
 (function () {
