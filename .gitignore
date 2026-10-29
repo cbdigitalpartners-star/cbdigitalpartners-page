@@ -5,3 +5,6 @@
 .claude/skills/impeccable/scripts/bin/
 # Configuración personal de Claude Code
 .claude/settings.local.json
+
+# Capturas originales del colegio: contienen datos personales, no se publican
+assets/colegio/

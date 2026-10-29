@@ -423,3 +423,27 @@
     });
   }
 })();
+
+// Contempora case: switch between real screens of the platform.
+(function () {
+  var fig = document.querySelector("[data-shots]");
+  var tabs = document.querySelector(".shots-tabs");
+  if (!fig || !tabs) return;
+  var imgs = fig.querySelectorAll("img[data-shot]");
+  var cap = fig.querySelector(".shots-cap");
+  var btns = tabs.querySelectorAll("button[data-shot]");
+  tabs.hidden = false;
+
+  tabs.addEventListener("click", function (e) {
+    var btn = e.target.closest("button[data-shot]");
+    if (!btn) return;
+    var key = btn.getAttribute("data-shot");
+    imgs.forEach(function (img) {
+      var on = img.getAttribute("data-shot") === key;
+      img.classList.toggle("is-on", on);
+      if (on) img.removeAttribute("aria-hidden"); else img.setAttribute("aria-hidden", "true");
+    });
+    btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    if (cap) cap.textContent = btn.getAttribute("data-cap");
+  });
+})();

@@ -273,10 +273,6 @@ header {
 }
 .deck-body { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
 .deck-card .deck-body img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left top; }
-.deck-mock { display: flex; flex-direction: column; }
-.deck-mock .sm-main { flex: 1; min-height: 0; }
-.deck-mock .sm-mods { grid-template-rows: repeat(2, 1fr); align-content: stretch; }
-.deck-mock .sm-mods span { min-height: 0; padding: 8px; hyphens: manual; overflow-wrap: normal; word-break: normal; }
 .deck-card[data-slot="0"] { transform: none; z-index: 3; cursor: default; }
 .deck-card[data-slot="1"] { transform: translate(9%, -11%); z-index: 2; box-shadow: 0 14px 34px rgba(var(--shadow), 0.10); }
 .deck-card[data-slot="2"] { transform: translate(18%, -22%); z-index: 1; box-shadow: none; }
@@ -307,9 +303,6 @@ header {
 @media (max-width: 520px) {
   .deck { aspect-ratio: 16 / 12; }
   .deck-card { width: 92%; }
-  .deck-mock .sm-roles { display: none; }
-  .deck-mock .sm-main { grid-template-columns: 1fr; }
-  .deck-mock .sm-mods { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .deck-long { display: none; }
   .deck-tabs { gap: 4px; }
   .deck-card[data-slot="1"] { transform: translate(4%, -9%); }
@@ -425,23 +418,23 @@ section.block { padding: var(--space-xl) 0; }
 .case-scope strong { color: var(--ink); font-weight: var(--fw-semibold); }
 
 /* Product window chrome shared by mock + screenshot */
-.school-mock, .browser {
+.browser {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 24px 60px rgba(var(--shadow), 0.14);
   overflow: hidden;
 }
-.sm-bar, .browser-bar {
+.browser-bar {
   display: flex; align-items: center; gap: 6px;
   padding: 10px 14px; border-bottom: 1px solid var(--line);
   background: color-mix(in srgb, var(--ink) 3%, var(--white));
 }
-.sm-bar i, .browser-bar i {
+.browser-bar i {
   width: 9px; height: 9px; border-radius: 50%;
   background: color-mix(in srgb, var(--ink) 16%, transparent);
 }
-.sm-bar span, .browser-bar span {
+.browser-bar span {
   margin-left: 8px; font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--muted);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -452,7 +445,7 @@ section.block { padding: var(--space-xl) 0; }
 }
 .browser img { display: block; width: 100%; height: auto; }
 
-/* Colegio Contempora: platform map mock */
+/* Case media glow */
 .case-media { position: relative; isolation: isolate; }
 .case-media::before {
   content: ""; position: absolute; inset: 8% 0 -6% 10%; z-index: -1;
@@ -460,46 +453,33 @@ section.block { padding: var(--space-xl) 0; }
   background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 14%, transparent), transparent);
 }
 .case-shot { margin: 0; }
-.sm-main { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.7fr); min-height: 260px; }
-.sm-roles {
-  list-style: none; padding: 14px 10px; display: flex; flex-direction: column; gap: 4px;
-  border-right: 1px solid var(--line);
-  font-size: var(--text-xs); color: var(--muted);
+/* Contempora: real screens, one at a time */
+.shots-body { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--white); }
+.shots-body img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left top;
+  opacity: 0; transition: opacity 0.35s var(--ease-out);
 }
-.sm-roles li { padding: 6px 10px; border-radius: var(--radius-xs); }
-.sm-roles li.is-on {
-  color: var(--accent-text); font-weight: var(--fw-semibold);
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-}
-.sm-mods {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px; padding: 14px; align-content: start;
-}
-.sm-mods span {
-  display: flex; align-items: flex-end; min-height: 64px;
-  padding: 10px; border: 1px solid var(--line); border-radius: var(--radius-sm);
-  font-size: var(--text-2xs); font-weight: var(--fw-semibold); line-height: 1.25;
-  hyphens: auto; overflow-wrap: anywhere; min-width: 0;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 5%, transparent), transparent 70%);
-}
-.sm-mods .sm-ai {
-  border-color: color-mix(in srgb, var(--accent-2) 55%, var(--line));
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-2) 14%, transparent), transparent 75%);
-}
-.sm-foot {
-  display: flex; align-items: center; gap: 8px;
+.shots-body img.is-on { opacity: 1; }
+.shots-cap {
   padding: 10px 14px; border-top: 1px solid var(--line);
-  font-size: var(--text-2xs); font-family: var(--font-mono); color: var(--muted);
+  font-size: var(--text-xs); color: var(--muted); line-height: 1.4;
 }
-.sm-dot {
-  width: 7px; height: 7px; border-radius: 50%; flex: none;
-  background: var(--accent-2);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 22%, transparent);
+.shots-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.shots-tabs[hidden] { display: none; }
+.shots-tabs button {
+  min-height: 44px; padding: 0 14px;
+  font: var(--fw-semibold) var(--text-sm)/1 var(--font-body);
+  color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; cursor: pointer;
+  transition: color var(--dur-1) var(--ease-out), border-color var(--dur-1) var(--ease-out), background var(--dur-1) var(--ease-out);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .sm-dot { animation: live 2.4s ease-in-out infinite; }
-  @keyframes live { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent-2) 0%, transparent); } }
+.shots-tabs button:hover { color: var(--ink); border-color: var(--accent); }
+.shots-tabs button[aria-pressed="true"] {
+  color: var(--accent-text); border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
+@media (prefers-reduced-motion: reduce) { .shots-body img { transition: none; } }
+@media (max-width: 520px) { .shots-tabs { gap: 4px; } .shots-tabs button { padding: 0 12px; } }
 
 /* Tu Marka: three connected products — a real sequence, so it's numbered by flow */
 .pipeline {
@@ -547,10 +527,6 @@ section.block { padding: var(--space-xl) 0; }
   .reveal-on .pipeline:has(> li.is-visible)::before { transform: scaleY(1); }
 }
 @media (max-width: 420px) {
-  .sm-main { grid-template-columns: 1fr; }
-  .sm-roles { flex-direction: row; flex-wrap: wrap; border-right: 0; border-bottom: 1px solid var(--line); }
-  .sm-mods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sm-mods span { min-height: 44px; }
   .case-facts > div:nth-child(even) { padding-left: 14px; }
 }
 
@@ -917,7 +893,7 @@ footer {
 
 /* ---------- High-contrast / forced colors ---------- */
 @media (forced-colors: active) {
-  .card, .sol-feature-media, .trust-item, .school-mock, .browser { border: 1px solid CanvasText; }
+  .card, .sol-feature-media, .trust-item, .browser { border: 1px solid CanvasText; }
   .scroll-progress { background: Highlight; }
   :focus-visible { outline-color: Highlight; }
 }

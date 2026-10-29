@@ -6,3 +6,6 @@ DESIGN.md
 CLAUDE.md
 skills-lock.json
 .gitignore
+
+# Capturas originales del colegio: contienen datos personales, no se publican
+assets/colegio/
